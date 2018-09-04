@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstName: MyString
+  lastName: MyString
+  middleInitial: MyString
+  pet: MyString
+  birthday: 2018-09-03
+  favoriteColor: MyString
+
+two:
+  firstName: MyString
+  lastName: MyString
+  middleInitial: MyString
+  pet: MyString
+  birthday: 2018-09-03
+  favoriteColor: MyString
