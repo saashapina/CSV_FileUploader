@@ -1,10 +1,11 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all
+    @people = Person.order("#{sort_column} #{sort_direction}")
   end
 
   # GET /people/1
@@ -68,6 +69,20 @@ class PeopleController < ApplicationController
   end
 
   private
+    def sortable_columns
+      ["lastName", "firstName", "middleInitial", "pet", "birthday", "favoriteColor"]
+    end
+
+    def sort_column
+      sortable_columns.include?(params[:column]) ? params[:column] : "lastName"
+      #prevents users from sorting by id
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+      #checks to make sure the direction is either ascending or descending
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_person
       @person = Person.find(params[:id])

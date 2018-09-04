@@ -50,4 +50,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rchardet'
-gem 'acsv', :path => "~/myProjects/Wistia-FileUploaderApp/ruby-acsv"
+gem 'acsv' , :path => "~/myProjects/Wistia-FileUploaderApp/ruby-acsv"
