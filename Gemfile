@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rchardet'
 gem 'acsv' , :path => "~/myProjects/Wistia-FileUploaderApp/ruby-acsv"
+
+ruby "2.3.3"
