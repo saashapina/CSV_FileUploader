@@ -1,14 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>People</h1>
+<div class="Container">
 
-<h3>Import People</h3>
-<%= form_tag import_people_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Upload File"%>
-<% end %>
+  <div class= "row topHeader">
+      <div class="col-md-4"><div class="peopleCounter"><%=Person.count%> People</div></div>
+      <div class="col-md-2"><div class="importFile">Import File</div></div>
+      <div class="col-md-6">
+        <%= form_tag import_people_path, multipart: true do %>
+          <div class="input-group">
+            <span class="form-control inputStyle"></span>
+            <span class="input-group-btn">
+              <label class="btn myButton" onclick="$(this).parent().find('input[type=file]').click();">Browse</label>
+              <%= file_field_tag :file, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());", style: "display: none;" %>
+              <label class="btn myButton">Upload<div style="display:none"><%= submit_tag %></div></label>
+            </span>
+          </div>
+        <% end %>
+      </div>
+  </div>
 
-<table class="table table-striped table-hover">
+
+<table class="table table-hover tableStyle">
   <thead>
     <tr>
       <th><%= sort_link "lastName" %></th>
@@ -24,15 +36,16 @@
   <tbody>
     <% @people.each do |person| %>
       <tr>
-        <td><%= person.lastName %></td>
-        <td><%= person.firstName %></td>
+        <td><%= link_to person.lastName, person %></td>
+        <td><%= link_to person.firstName, person %></td>
         <td><%= person.middleInitial %></td>
         <td><%= person.pet %></td>
         <td><%= person.birthday.strftime("%m/%d/%Y") %></td>
         <td><%= person.favoriteColor %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to person, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
+          <i class="fa fa-trash-o"></i>
+          <% end%>
+        </td>  
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +53,5 @@
 
 <br>
 
-<%= link_to 'New Person', new_person_path %>
+<%= link_to 'New Person', new_person_path, class: "btn btn-default"%>
+</div>
