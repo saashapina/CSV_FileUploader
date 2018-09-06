@@ -1,3 +1,6 @@
 [submodule "ruby-ascv"]
 	path = ruby-ascv
 	url = https://github.com/wvengen/ruby-acsv.git
+[submodule "ruby-acsv"]
+	path = ruby-acsv
+	url = https://github.com/wvengen/ruby-acsv.git
