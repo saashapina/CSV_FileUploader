@@ -10,9 +10,9 @@ Getting enviornment up and running
 
 Wistia-FileUploader works with Ruby 2.3.3, and later.
 
-### Installing
+### Set Up & Installing
 
-How to get development enviornment running
+
 * use git clone --recursive to clone down all files and submodules
 
 ```
@@ -28,10 +28,10 @@ Change the file path to your current file path:
 ```
 gem 'acsv' , :path => "~/<YourFilePathHere>/Wistia-FileUploaderApp/ruby-acsv"
 ```
-Then
+Then run
 ```
 bundle install
-db:migrate
+rails db:migrate
 rails s
 ```
 
@@ -72,10 +72,10 @@ Tests
 * should update person
 * should destroy person
  
-Run unit tests with
+Run tests with
 
 ```
-rake test
+rails test
 ```
 
 ### Tech Stack
@@ -85,9 +85,4 @@ rake test
 * JavaScript
 * Ruby
 
-### Reflection 
- A short explanation discussing how the project went, design decisions you made, lessons you learned, and things you'd do differently next time.
-
-* Design decisions
-    * I followed the mock up as closely as I could. I had to implement an upload button
 
