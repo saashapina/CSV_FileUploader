@@ -2,13 +2,15 @@
 
 A simple web application that takes a list of people via file upload, parses them, persists them to a database, and displays them in a sortable table on a web page.
 
+<img src="./uploaderSnip.png "/>
+
 ## Getting Started
 
-Getting enviornment up and running
+Getting enviornment set up and running
 
 ### Requirements
 
-Wistia-FileUploader works with Ruby 2.3.3, and later.
+Wistia-FileUploader works with Ruby 2.3.3 and later.
 
 ### Set Up & Installing
 
@@ -84,5 +86,6 @@ rails test
 * SCSS
 * JavaScript
 * Ruby
+
 
 
