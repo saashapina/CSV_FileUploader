@@ -45,7 +45,7 @@ rails s
     * Hashes " # "
     * Semicolons " ; "
     * Tabs " /t "
-* Current Supported Format (Any Above Delimiter)
+* Current Supported Format Order (Any Above Delimiter)
     * LastName FirstName MiddleInitial Pet DateOfBirth FavoriteColor
 * Current Supported DOB Format
     * mm-dd-yyyy
