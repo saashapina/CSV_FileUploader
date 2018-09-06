@@ -2,7 +2,7 @@
 
 A simple web application that takes a list of people via file upload, parses them, persists them to a database, and displays them in a sortable table on a web page.
 
-<img src="https://preview.ibb.co/nyLzEe/uploader_Snip.png"/>
+<img src="https://preview.ibb.co/kRYVLK/uploader_Snip.png" width="100%"/>
 
 ## Getting Started
 
