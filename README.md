@@ -6,7 +6,7 @@ A simple web application that takes a list of people via file upload, parses the
 
 ## Getting Started
 
-Getting enviornment set up and running
+Getting development enviornment set up and running
 
 ### Requirements
 
@@ -37,9 +37,7 @@ rails db:migrate
 rails s
 ```
 
-### Current Features and Compatible Formats
-
-* Browse, Upload and parse CSV and txt files
+### Compatible Formats
 * Handled Delimiters
     * Spaces " "
     * Commas " , "
@@ -47,17 +45,20 @@ rails s
     * Hashes " # "
     * Semicolons " ; "
     * Tabs " /t "
-* Current Supported Formats (Any Above Delimiter)
+* Current Supported Format (Any Above Delimiter)
     * LastName FirstName MiddleInitial Pet DateOfBirth FavoriteColor
 * Current Supported DOB Format
     * mm-dd-yyyy
+
+### Current Features
+* Browse, Upload and parse CSV and txt files
 * Ascending/Descending Sorting by Category
 * Add New Person Manually
 * Delete functionality
 * People Count
 
 ### TODO 
-* Support Following Formats:
+* Support Following Format Order:
     * LastName,FirstName,Pet,FavoriteColor,DateOfBirth
     * LastName|FirstName|MiddleInitial|Pet|FavoriteColor|DateOfBirth
 * Support DOB Format
