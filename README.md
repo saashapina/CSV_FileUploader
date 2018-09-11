@@ -15,20 +15,9 @@ CSV File Uploader works with Ruby 2.3.3 and later.
 ### Set Up & Installing
 
 
-* use git clone --recursive to clone down all files and submodules
-
 ```
-git clone --recursive <repo here>
+git clone <repo here>
 cd into repo 
-```
-Go to Gemfile, scroll down to
-```
-gem 'acsv' , :path => "~/myProjects/Wistia-FileUploaderApp/ruby-acsv"
-```
-Change the file path to your current file path:
-
-```
-gem 'acsv' , :path => "~/<YourFilePathHere>/Wistia-FileUploaderApp/ruby-acsv"
 ```
 Then run
 ```
