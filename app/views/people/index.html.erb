@@ -2,8 +2,71 @@
 
 <div class="Container">
 
-  <div class= "row topHeader">
-      <div class="col-md-4"><div class="peopleCounter"><%=Person.count%> People</div></div>
+  <div class="headerContainer">
+    <h1 class="title">My Friends List<h1>
+
+    <button type="button" class="btn btnStyle" data-toggle="modal" data-target="#infoModal"> 
+    Open Me
+    </button>
+    <!---------------------------- Modal ----------------------------------->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalTitle">Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="instructions">
+              <div class="row listContainer"  >
+                <ul class="columns" style="list-style-type:none" >
+                  <h5>Features</h5>
+                  <li>Import Friends from CSV</li>
+                  <li>Create New Friend</li>
+                  <li>Edit Friend</li>
+                  <li>Delete Friend</li>
+                  <li>Sort through any category</li>
+                  <li>Use any delimiter: "," ";" "/t" "|" "#"</li>
+                </ul>
+                <ul class="columns" style="list-style-type:none" >
+                  <h5>Input</h5>
+                  <li>Last Name</li>
+                  <li>First Name</li>
+                  <li>Middle Initial</li>
+                  <li>Pet</li>
+                  <li>Birthday</li>
+                  <li>Favorite Color</li>
+                  <li>Phone Number</li>
+                </ul>
+                <ul class="columns" style="list-style-type:none" >
+                  <h5>Format CSV Examples</h5>
+                  <li>Lopez,George,E,Dog,04/23/1961,Green,805-555-6490</li>
+                  <li>Lopez;George;E;Dog;04/23/1961;Green;805-555-6490</li>
+                  <li>Lopez George E  Dog 04/23/1961 Green  805-555-6490</li>
+                  <li>Lopez|George|E|Dog|04/23/1961|Green|805-555-6490</li>
+                  <li>Lopez#George#E#Dog#04/23/1961#Green#805-555-6490</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------- Model End------------------------------->
+
+  </div> <!--header end-->
+
+  <div class= "row importHeader">
+      <div class="col-md-4"><div class="peopleCounter"><%=Person.count%> Friends</div></div>
       <div class="col-md-2"><div class="importFile">Import File</div></div>
       <div class="col-md-6">
         <%= form_tag import_people_path, multipart: true do %>
@@ -29,10 +92,10 @@
       <th><%= sort_link "pet" %></th>
       <th><%= sort_link "birthday" %></th>
       <th><%= sort_link "favoriteColor" %></th>
+      <th><%= sort_link "phoneNumber" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @people.each do |person| %>
       <tr>
@@ -42,6 +105,7 @@
         <td><%= person.pet %></td>
         <td><%= person.birthday.strftime("%m/%d/%Y") %></td>
         <td><%= person.favoriteColor %></td>
+        <td><%= person.phoneNumber %></td>
         <td><%= link_to person, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
           <i class="fa fa-trash-o"></i>
           <% end%>

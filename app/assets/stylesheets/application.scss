@@ -25,7 +25,50 @@
     padding: 5%;
 }
 
-.topHeader {
+.headerContainer {
+    text-align: center;
+
+    .btnStyle {
+        color: #a7a9ac;
+        width: 90%;
+    }
+    .title {
+        color: #54bbff;
+    }
+    .instructions {
+        color: #a7a9ac;
+        text-align: left;
+        font-weight: 500;
+        
+    }
+    .listContainer {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0.5%;
+
+        .columns {
+            text-align: center;
+            color: #a7a9ac; 
+            border: solid 1px #a7a9ac;
+            padding: 1%;
+            h5 {
+                color: #a7a9ac;
+                text-align: center;
+            }
+            li {
+                padding: 0.5%;
+                text-align: left;
+                margin-left: 3%;
+            }
+        }
+
+    
+    }
+
+}
+
+
+.importHeader {
     padding: 1%;
     padding-bottom: 3%;
 

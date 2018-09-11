@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :pet %>
-    <%= form.select :pet, ['dog', 'cat', 'both', 'none'] %>
+    <%= form.select :pet, ['Dog', 'Cat', 'Rabbit', 'Fish', 'Iguana', 'Horse', 'Hamster', 'Snake'] %>
   </div>
 
   <div class="field">
@@ -40,6 +40,13 @@
     <%= form.label :favoriteColor %>
     <%= form.text_field :favoriteColor, id: :person_favoriteColor %>
   </div>
+
+  <div class="field">
+    <%= form.label :phoneNumber %>
+    <%= form.text_field :phoneNumber, id: :person_phoneNumber %>
+  </div>
+
+ 
 
   <div class="actions">
     <%= form.submit %>
