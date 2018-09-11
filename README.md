@@ -1,4 +1,4 @@
-# Wistia- File Uploader
+# CSV File Uploader
 
 A simple web application that takes a list of people via file upload, parses them, persists them to a database, and displays them in a sortable table on a web page.
 
@@ -10,7 +10,7 @@ Getting development enviornment set up and running
 
 ### Requirements
 
-Wistia-FileUploader works with Ruby 2.3.3 and later.
+CSV File Uploader works with Ruby 2.3.3 and later.
 
 ### Set Up & Installing
 
