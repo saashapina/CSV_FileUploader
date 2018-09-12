@@ -1,15 +1,53 @@
 <p id="notice"><%= notice %></p>
+ <%# <div class="instructions">
+<div class="row listContainer"  > %>
+
 
 <div class="Container">
 
   <div class="headerContainer">
     <h1 class="title">My Friends List<h1>
-
-    <button type="button" class="btn btnStyle" data-toggle="modal" data-target="#infoModal"> 
-    Open Me
+    
+    <button type="button" class="btn btnStyle" data-toggle="modal" data-target="#infoModal1"> 
+    Features
     </button>
     <!---------------------------- Modal ----------------------------------->
-    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
+    <div class="modal fade" id="infoModal1" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalTitle">Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body"> 
+            <ul class="columns">
+              <h5>Features</h5>
+              <li>Import Friends from CSV</li>
+              <li>Create New Friend</li>
+              <li>Edit Friend</li>
+              <li>Delete Friend</li>
+              <li>Sort through any category</li>
+              <li>Use any delimiter: "," ";" "/t" "|" "#"</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------- Model End------------------------------->
+     <button type="button" class="btn btnStyle" data-toggle="modal" data-target="#infoModal2"> 
+    Input Requirements
+    </button>
+        <!---------------------------- Modal ----------------------------------->
+    <div class="modal fade" id="infoModal2" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
 
@@ -21,37 +59,16 @@
           </div>
 
           <div class="modal-body">
-            <div class="instructions">
-              <div class="row listContainer"  >
-                <ul class="columns" style="list-style-type:none" >
-                  <h5>Features</h5>
-                  <li>Import Friends from CSV</li>
-                  <li>Create New Friend</li>
-                  <li>Edit Friend</li>
-                  <li>Delete Friend</li>
-                  <li>Sort through any category</li>
-                  <li>Use any delimiter: "," ";" "/t" "|" "#"</li>
-                </ul>
-                <ul class="columns" style="list-style-type:none" >
-                  <h5>Input</h5>
-                  <li>Last Name</li>
-                  <li>First Name</li>
-                  <li>Middle Initial</li>
-                  <li>Pet</li>
-                  <li>Birthday</li>
-                  <li>Favorite Color</li>
-                  <li>Phone Number</li>
-                </ul>
-                <ul class="columns" style="list-style-type:none" >
-                  <h5>Format CSV Examples</h5>
-                  <li>Lopez,George,E,Dog,04/23/1961,Green,805-555-6490</li>
-                  <li>Lopez;George;E;Dog;04/23/1961;Green;805-555-6490</li>
-                  <li>Lopez George E  Dog 04/23/1961 Green  805-555-6490</li>
-                  <li>Lopez|George|E|Dog|04/23/1961|Green|805-555-6490</li>
-                  <li>Lopez#George#E#Dog#04/23/1961#Green#805-555-6490</li>
-                </ul>
-              </div>
-            </div>
+            <ul class="columns">
+              <h5>Input</h5>
+              <li>Last Name</li>
+              <li>First Name</li>
+              <li>Middle Initial</li>
+              <li>Pet</li>
+              <li>Birthday</li>
+              <li>Favorite Color</li>
+              <li>Phone Number</li>
+            </ul>
           </div>
 
           <div class="modal-footer">
@@ -62,7 +79,40 @@
       </div>
     </div>
     <!-------------------------------------- Model End------------------------------->
+    <button type="button" class="btn btnStyle" data-toggle="modal" data-target="#infoModal3"> 
+    Format Input Examples
+    </button>
+    <!---------------------------- Modal ----------------------------------->
+    <div class="modal fade" id="infoModal3" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
 
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalTitle">Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+                <ul class="columns" style="list-style-type:none" >
+                  <h5>Format CSV Examples</h5>
+                  <li>Lopez,George,E,Dog,04/23/1961,Green,805-555-6490</li>
+                  <li>Lopez;George;E;Dog;04/23/1961;Green;805-555-6490</li>
+                  <li>Lopez George E  Dog 04/23/1961 Green  805-555-6490</li>
+                  <li>Lopez|George|E|Dog|04/23/1961|Green|805-555-6490</li>
+                  <li>Lopez#George#E#Dog#04/23/1961#Green#805-555-6490</li>
+                </ul>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------- Model End------------------------------->
   </div> <!--header end-->
 
   <div class= "row importHeader">
