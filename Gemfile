@@ -58,3 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rchardet'
 gem 'acsv' 
+
+group :production do
+  gem "pg"
+end
