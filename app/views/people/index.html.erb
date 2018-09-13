@@ -80,7 +80,7 @@
     </div>
     <!-------------------------------------- Model End------------------------------->
     <button type="button" class="btn btnStyle" data-toggle="modal" data-target="#infoModal3"> 
-    Format Input Examples
+    CSV Format Examples
     </button>
     <!---------------------------- Modal ----------------------------------->
     <div class="modal fade" id="infoModal3" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
@@ -96,7 +96,7 @@
 
           <div class="modal-body">
                 <ul class="columns" style="list-style-type:none" >
-                  <h5>Format CSV Examples</h5>
+                  <h5>CSV Format Examples</h5>
                   <li>Lopez,George,E,Dog,04/23/1961,Green,805-555-6490</li>
                   <li>Lopez;George;E;Dog;04/23/1961;Green;805-555-6490</li>
                   <li>Lopez George E  Dog 04/23/1961 Green  805-555-6490</li>
@@ -153,7 +153,7 @@
         <td><%= link_to person.firstName, person %></td>
         <td><%= person.middleInitial %></td>
         <td><%= person.pet %></td>
-        <td><%= person.birthday.strftime("%m/%d/%Y") %></td>
+        <td><%= person.birthday.strftime("%m/%d/%Y")%></td>
         <td><%= person.favoriteColor %></td>
         <td><%= person.phoneNumber %></td>
         <td><%= link_to person, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
